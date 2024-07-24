@@ -34,7 +34,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://AlfredoMAramburo.github.io/Patrones-de-Render-y-Composicion.git",
+  "homepage": "https://AlfredoMAramburo.github.io/Patrones-de-Render-y-Composicion",
   "devDependencies": {
     "gh-pages": "^6.1.1"
   }
