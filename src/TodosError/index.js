@@ -1,11 +1,8 @@
 import React from 'react';
-// import './TodosError.css';
+import '../EmptyTodos/Titulo-EmptyTodos.css'
 
 function TodosError() {
-  return (
-    <p>Error en Metas...</p>
-  );
+  return <p className='Titulo-EmptyTodos'>Desespérate, hubo un error...</p>;
 }
 
 export { TodosError };
-

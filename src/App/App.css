@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #233553;
+  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #97ca3f;
+  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +35,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.leyendaSeachText {
+  text-align: center;  /* Centrar el texto horizontalmente */
+  margin-top: 20px;    /* Ajusta el espacio superior según sea necesario */
+  font-size: 1em;    /* Ajusta el tamaño de la fuente según sea necesario */
+  color: #333;         /* Ajusta el color del texto según sea necesario */
 }

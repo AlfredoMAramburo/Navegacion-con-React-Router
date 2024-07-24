@@ -1,23 +1,25 @@
+import React from 'react';
+import { CompleteIcon } from '../TodoIcon/CompleteIcon';
+import { DeleteIcon } from '../TodoIcon/DeleteIcon';
 import './TodoItem.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 function TodoItem(props) {
   return (
     <li className="TodoItem">
-      <span className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}
-        onClick={props.onComplete}>
-        <FontAwesomeIcon icon={faCheck} />
-      </span>
-      <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>{props.text}</p>
-      <span className="Icon Icon-delete"
-        onClick={props.onDelete}> {/* Cambiado de onDelate a onDelete */}
-        <FontAwesomeIcon icon={faTrash} />
-      </span>
+      <CompleteIcon
+        completed={props.completed}
+        onComplete={props.onComplete}
+      />
+      <p
+        className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}
+      >
+        {props.text}
+      </p>
+      <DeleteIcon
+        onDelete={props.onDelete}
+      />
     </li>
   );
 }
 
 export { TodoItem };
-
-

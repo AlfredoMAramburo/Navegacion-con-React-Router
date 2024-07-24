@@ -1,22 +1,27 @@
 import React from 'react';
-import { TodoContext } from '../TodoContext';
 import './TodoCounter.css';
 
-function TodoCounter() {
-  const {
-    completedTodos,
-    totalTodos
-  } = React.useContext(TodoContext)
+function TodoCounter({ totalTodos, completedTodos, loading }) {
+  if (totalTodos === 0) {
+    return (
+      <h2 className="TodoCounter">
+        ¡Crea tu primer Meta!
+      </h2>
+    );
+  }
+
   return (
-    <h1 className="TodoCounter">
-      {    completedTodos === totalTodos ? (
+    <h2
+      className={`TodoCounter ${!!loading && "TodoCounter--loading"}`}
+    >
+      {completedTodos === totalTodos ? (
         <span>Has completado todas las metas</span>
       ) : (
         <>
           Has completado <span>{completedTodos}</span> de <span>{totalTodos}</span> TODOS
         </>
       )}
-    </h1>
+    </h2>
   );
 }
 
