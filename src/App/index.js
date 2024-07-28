@@ -12,25 +12,61 @@ import { TodoForm } from '../TodoForm';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { Modal } from '../Modal';
 import { ChangeAlert } from '../ChangeAlert';
-import './App.css'
+import './App.css';
+
+// Estado inicial
+const initialState = {
+  openModal: false,
+  searchValue: '',
+};
+
+// Tipos de acción
+const actionTypes = {
+  SET_OPEN_MODAL: 'SET_OPEN_MODAL',
+  SET_SEARCH_VALUE: 'SET_SEARCH_VALUE',
+};
+
+// Reducer
+const reducer = (state, action) => {
+  switch (action.type) {
+    case actionTypes.SET_OPEN_MODAL:
+      return {
+        ...state,
+        openModal: action.payload,
+      };
+    case actionTypes.SET_SEARCH_VALUE:
+      return {
+        ...state,
+        searchValue: action.payload,
+      };
+    default:
+      return state;
+  }
+};
 
 function App() {
-  const {
-    error,
-    loading,
-    searchedTodos,
-    completeTodo,
-    deleteTodo,
-    openModal,
-    setOpenModal,
-    totalTodos,
-    completedTodos,
-    searchValue,
-    setSearchValue,
-    addTodo,
-    sincronizeTodos,
-  } = useTodos();
-  
+  const { 
+    error, 
+    loading, 
+    searchedTodos, 
+    completeTodo, 
+    deleteTodo, 
+    totalTodos, 
+    completedTodos, 
+    addTodo, 
+    sincronizeTodos } = useTodos();
+  const [state, dispatch] = React.useReducer(reducer, initialState);
+
+  const setOpenModal = (open) => {
+    dispatch({ type: actionTypes.SET_OPEN_MODAL, payload: open });
+  };
+
+  const setSearchValue = (value) => {
+    dispatch({ type: actionTypes.SET_SEARCH_VALUE, payload: value });
+  };
+
+  const { openModal, searchValue } = state;
+
   return (
     <React.Fragment>
       <TodoHeader loading={loading}>
@@ -55,9 +91,8 @@ function App() {
         onError={() => <TodosError />}
         onLoading={() => <TodosLoading />}
         onEmptyTodos={() => <EmptyTodos />}
-        onEmptySearchResults={
-          (searchText) => <p className='leyendaSeachText'>No hay resultados para {searchText}</p>
-        }
+        onEmptySearchResults={(searchText) => 
+        <p className='leyendaSeachText'>No hay resultados para {searchText}</p>}
       >
         {todo => (
           <TodoItem
