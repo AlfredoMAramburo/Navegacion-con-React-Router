@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Navegacion-con-React-Router/static/css/main.66ecb6ec.css",
+    "main.js": "/Navegacion-con-React-Router/static/js/main.3e65b765.js",
+    "index.html": "/Navegacion-con-React-Router/index.html",
+    "static/media/delete.svg": "/Navegacion-con-React-Router/static/media/delete.331149da222541bc87c25bf8d775a070.svg",
+    "static/media/edit.svg": "/Navegacion-con-React-Router/static/media/edit.ca80ed44ca21affa8d3f6064291bc87e.svg",
+    "static/media/check.svg": "/Navegacion-con-React-Router/static/media/check.fa4fb594b16385306a04b9c87c0feb55.svg",
+    "main.66ecb6ec.css.map": "/Navegacion-con-React-Router/static/css/main.66ecb6ec.css.map",
+    "main.3e65b765.js.map": "/Navegacion-con-React-Router/static/js/main.3e65b765.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.66ecb6ec.css",
+    "static/js/main.3e65b765.js"
+  ]
+}
