@@ -13,8 +13,6 @@ Este repositorio alberga un proyecto de aplicación web desarrollado con React.j
 - **Rutas Dinámicas con `useParams`**: Utiliza `useParams` para implementar rutas dinámicas.
 - **Navegación con `NavLink`**: Se emplean rutas creadas con `NavLink` para los botones de agregar y editar metas.
 
-## Instalación
+## Visualización del Proyecto
 
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/AlfredoMAramburo/Prueba-E-commerce-con-React-.git
+Puedes visualizar el proyecto en el siguiente enlace: https://alfredomaramburo.github.io/Navegacion-con-React-Router/ 
