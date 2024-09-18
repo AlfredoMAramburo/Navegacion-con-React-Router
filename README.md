@@ -9,6 +9,7 @@ Este repositorio alberga un proyecto de aplicación web desarrollado con React.j
 - **Interfaz Interactiva**: Ofrece una visualización y actualización de metas de manera intuitiva y accesible.
 - **Búsqueda Dinámica**: El buscador actualiza los resultados en la URL mientras se escribe, permitiendo copiar y pegar la URL en otra pestaña para ver la búsqueda también.
 - **Botón de Editar**: El botón de editar desaparece una vez que una meta se completa.
+- **Persistencia con `localStorage`**: Las metas se guardan en el `localStorage` del mismo navegador, lo que permite que los datos persistan entre sesiones.
 - **Uso de `useReducer`**: La principal característica del proyecto es el uso de `useReducer` para la gestión del estado.
 - **Rutas Dinámicas con `useParams`**: Utiliza `useParams` para implementar rutas dinámicas.
 - **Navegación con `NavLink`**: Se emplean rutas creadas con `NavLink` para los botones de agregar y editar metas.
